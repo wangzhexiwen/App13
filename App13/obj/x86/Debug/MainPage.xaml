@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="App13.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App13"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="White"
+                Orientation="Horizontal">
+        <NavigationView x:ConnectionId='1' Width="200"
+                        Name="navview"
+                                                                   >
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="选取播放文件"
+                                    Tag="search"
+                                    Icon="Read"></NavigationViewItem>
+                <NavigationViewItem Content="播放"
+                                    Tag="play"
+                                    Icon="Play"></NavigationViewItem>
+                <NavigationViewItem Content="暂停"
+                                    Tag="pause"
+                                    Icon="Pause"></NavigationViewItem>
+                <NavigationViewItem Content="停止"
+                                    Tag="stop"
+                                    Icon="Stop"></NavigationViewItem>
+            </NavigationView.MenuItems>
+            <NavigationView.Header >My Player</NavigationView.Header>
+        </NavigationView>
+        <MediaElement x:ConnectionId='2' Height="550"
+                      Width="550"
+                      AutoPlay="False"
+                      AreTransportControlsEnabled="True"
+                      HorizontalAlignment="Right"
+                      Name='media'></MediaElement>
+    </StackPanel>
+</Page>
+
